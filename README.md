@@ -29,25 +29,25 @@ screenshots/realestatetool.jpg
 
 ## Architecture Overview
 
-User (Streamlit UI)
-        |
-        v
-Web URLs ──> Selenium Loader
-        |
-        v
-Text Chunking (RecursiveCharacterTextSplitter)
-        |
-        v
-Chroma Vector DB (ONNXMiniLM_L6_V2 Embeddings)
-        |
-        v
-Context Retrieval
-        |
-        v
-Groq LLM (LLaMA 3.1)
-        |
-        v
-Answer Displayed to User
+User (Streamlit UI)  
+        |  
+        v  
+Web URLs ──> Selenium Loader  
+        |  
+        v  
+Text Chunking (RecursiveCharacterTextSplitter)  
+        |  
+        v  
+Chroma Vector DB (ONNXMiniLM_L6_V2 Embeddings)  
+        |  
+        v  
+Context Retrieval  
+        |  
+        v  
+Groq LLM (LLaMA 3.1)  
+        |  
+        v  
+Answer Displayed to User  
 
 ## Tech Stack
 | Component        | Technology                |
@@ -111,5 +111,5 @@ streamlit run main.py
 - Streamlit
 
 ## Author
-Shijin Ramesh
+Shijin Ramesh  
 [LinkedIn](https://www.linkedin.com/in/shijinramesh/) | [Portfolio](https://www.shijinramesh.co.in/)
