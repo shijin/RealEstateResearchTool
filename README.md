@@ -9,9 +9,9 @@ A **Retrieval-Augmented Generation (RAG)** based GenAI application that allows u
 ### Streamlit Application Screenshot
 
 ```text
-screenshots/realestatetool.jpg
+realestatetool.jpg
 ```
-![Streamlit App Screenshot](screenshots/realestatetool.jpg)
+![Streamlit App Screenshot](realestatetool.jpg)
 
 ### Live Deployed App
 #### Deployed URL
