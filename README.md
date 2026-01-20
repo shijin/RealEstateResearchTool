@@ -95,11 +95,41 @@ streamlit run main.py
 
 ## Design Decisions & Learnings
 
-- ❌ Avoided HuggingFace embeddings due to Windows stability issues
-- ✅ Used ONNXMiniLM_L6_V2 for reliable local embeddings
-- ✅ Used Chroma native client instead of LangChain vectorstore
-- ✅ Kept LangChain limited to LLM orchestration only
-- ✅ Prioritized debuggability and production-style architecture
+- ❌ Avoided HuggingFace embeddings due to repeated instability on Windows systems
+- ✅ Adopted **ONNXMiniLM_L6_V2 embeddings** for reliability and performance
+- ✅ Used **Chroma native client** instead of LangChain vectorstore to avoid interface mismatches
+- ✅ Limited LangChain usage to **LLM orchestration only**
+- ❌ Selenium not used in cloud deployment due to platform constraints
+- ✅ Implemented cloud-safe ingestion using `WebBaseLoader`
+- ✅ Handled Streamlit rerun behavior using `st.session_state`
+
+This project involved resolving multiple real-world issues related to:
+- environment mismatches
+- dependency conflicts
+- cloud deployment constraints
+- UI state management
+
+## Deployment Notes (Streamlit Cloud)
+
+- The deployed version uses **HTTP-based web scraping (`WebBaseLoader`)** instead of Selenium.
+- This is due to **Streamlit Cloud restrictions**, which do not support browser-based tools like Selenium or Playwright.
+- Selenium-based ingestion is fully supported in **local environments**.
+
+This design ensures:
+- Cloud compatibility
+- Stable deployments
+- Clear separation between local experimentation and production demos
+
+## Challenges Faced
+
+- Handling JavaScript-rendered websites during ingestion
+- Resolving embedding compatibility issues across environments
+- Adapting Selenium-based workflows for cloud deployment
+- Debugging silent failures caused by Streamlit reruns
+- Ensuring stable vector storage and retrieval in production
+
+Each challenge was addressed through architectural changes rather than hacks,
+resulting in a more robust and production-aligned GenAI system.
 
 ## Acknowledgements
 
