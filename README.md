@@ -8,7 +8,7 @@ A **Retrieval-Augmented Generation (RAG)** based GenAI application that allows u
 
 ### Streamlit Application Screenshot
 
-![Real Estate Research Tool](realestatetool.jpg)
+![Real Estate Research Tool](realestatetool.JPG)
 
 ### Live Deployed App
 #### Deployed URL
