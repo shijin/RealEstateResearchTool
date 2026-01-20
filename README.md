@@ -11,7 +11,7 @@ A **Retrieval-Augmented Generation (RAG)** based GenAI application that allows u
 ![Real Estate Research Tool](realestatetool.JPG)
 
 ### Live Deployed App
-#### Deployed URL
+[Deployed URL](https://realestatetool.streamlit.app/)
 
 ## Key Features
 
